@@ -187,7 +187,7 @@ std::string exec( const char* cmd ) {
 bool isTitleFound( std::string title ) {
 
     std::string line;
-    std::ifstream infile( "dont_send_eol.txt" );
+    std::ifstream infile( "/usr/share/microem/dont_send_eol.txt" );
     while ( infile >> line ) {
         if ( title.find( line ) != std::string::npos ) {
             return true;
@@ -204,7 +204,7 @@ int main( int argc, char* argv[] ) {
 
 	signal( SIGINT, signal_callback_handler );
 
-	system( "sudo insmod /lib/modules/`uname -r`/microem.ko 2>/dev/null 1>/dev/null" );
+	//system( "sudo insmod /lib/modules/`uname -r`/microem.ko 2>/dev/null 1>/dev/null" );
 
 #ifdef USE_UINPUT
     if ( setup_uinput_device() < 0 ) {
@@ -288,6 +288,7 @@ int main( int argc, char* argv[] ) {
 
                                 std::cout << uid << std::endl;
 
+                                // xdotool под root разве сможет подключиться к окнам не от root?
                                 std::string title = exec( "xdotool getactivewindow getwindowname" );
 
                                 if ( isTitleFound( title ) ) {
