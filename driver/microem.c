@@ -649,7 +649,7 @@
  }
  
  static struct usb_driver skel_driver = {
-         .name =         "microm",
+         .name =         "microem",
          .probe =        skel_probe,
          .disconnect =   skel_disconnect,
          .suspend =      skel_suspend,
