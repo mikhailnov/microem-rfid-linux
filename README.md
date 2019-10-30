@@ -21,3 +21,9 @@
 * `systemctll disable microemscan` - убрать из автозагрузки
 * `systemctl status microemscan` - узнать состояние
 * `journalctl -b 0 -u microemscan` - узнать лог работы
+
+## Установка на ROSA Linux
+
+Для установки на ROSA достаточно из репозитория поставить пакет `microemscan` (`sudo urpmi microemscan`). Пакет `dkms-microemscan-rfid` с модулем ядра (драйвером) подтянется как зависимость.
+
+Исходники пакета здесь: [https://abf.io/import/microem-rfid-linux](https://abf.io/import/microem-rfid-linux)
