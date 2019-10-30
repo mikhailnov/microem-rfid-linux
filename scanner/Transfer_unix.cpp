@@ -240,7 +240,7 @@ bool CTransfer::Open( DWORD LogLevel, int Port, int Baud )
     {
 		char str[20];
 
-		sprintf(str, "/dev/microm%d", Port );
+		sprintf(str, "/dev/microem%d", Port );
 
 		/* USB */
 		printf("Try connect to USB device %s'\n", str);

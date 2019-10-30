@@ -483,7 +483,7 @@
   * and to have the device registered with the driver core
   */
  static struct usb_class_driver skel_class = {
-         .name =         "microm%d",
+         .name =         "microem%d",
          .fops =         &skel_fops,
          .minor_base =   USB_SKEL_MINOR_BASE,
  };
