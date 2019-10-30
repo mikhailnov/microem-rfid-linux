@@ -13,4 +13,11 @@
 
 ## Сборка
 
-Для сборки в папках `driver` и `scanner` запускать `make`, для установки запускать `make install`.
+Для сборки в папках `driver` и `scanner` запускать `make`, для установки запускать `make install`. Для установки сервиса systemd выполните `make install-systemd`.
+
+## Работа с сервисом systemd
+
+* `systemctl enable microemscan` - добавить в автозагрузку
+* `systemctll disable microemscan` - убрать из автозагрузки
+* `systemctl status microemscan` - узнать состояние
+* `journalctl -b 0 -u microemscan` - узнать лог работы
