@@ -2,7 +2,7 @@ WITH_XDO ?= 0
 XDO_VERSION ?= 3
 CXX ?= g++
 CFLAGS ?= -O2 -g
-PREFIX ?= /usr
+PREFIX ?= /usr/local
 BINDIR ?= $(PREFIX)/bin
 
 ifeq ($(WITH_XDO),1)
