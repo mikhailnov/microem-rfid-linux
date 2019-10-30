@@ -13,7 +13,7 @@ all:
 	g++ $(CFLAGS) -I. main.cpp Transfer_unix.cpp Clscrfl.cpp -o microemscan
 
 install:
-	install -m0755 microemscan $(DESTDIR)/$(BINDIR)/microemscan
+	install -D -m0755 microemscan $(DESTDIR)/$(BINDIR)/microemscan
 
 clean:
 	rm -f microemscan
