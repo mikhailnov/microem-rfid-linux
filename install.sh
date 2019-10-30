@@ -20,6 +20,6 @@ cd "$dir0/scanner"
 make
 sudo install -m0755 microemscan /usr/local/bin/microemscan
 touch /usr/share/microem/dont_send_eol.txt
-sudo install -m0644 "$dir0/microem.service" /etc/systemd/system/microem.service
+sudo install -m0644 "$dir0/scanner/microemscan.service" /etc/systemd/system/microemscan.service
 sudo systemctl daemon-reload
 sudo systemctl enable --now microem.service
