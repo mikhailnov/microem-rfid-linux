@@ -15,5 +15,10 @@ all:
 install:
 	install -D -m0755 microemscan $(DESTDIR)/$(BINDIR)/microemscan
 
+install-systemd:
+	install -D -m0644 microemscan.service $(DESTDIR)/etc/systemd/systemd/microemscan.service
+	systemctl daemon-reload
+	systemctl enable microemscan.service
+
 clean:
 	rm -f microemscan
